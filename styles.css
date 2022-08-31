@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "Bagnard";
+  src: url("Bagnard.woff2") format("woff2"), url("Bagnard.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Bagnard;
+  margin: 0;
+  padding: 0;
+  color: #181d21;
+  background-color: #f7f6f2;
+}
+.main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1rem;
+}
+.hero {
+  height: 80vh;
+  background-image: url(img/quadra.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.bigtext {
+  max-width: 800px;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0.5rem;
+}
+.seclink {
+  background-color: #efede4;
+  padding: 0.25rem;
+  border-radius: 6rem;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 1000;
+  color: #4f46e5;
+  font-size: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 0rem;
+  margin: 0;
+  max-width: 80vw;
+  display: block;
+  animation: fall-title 3s linear;
+  line-height: 3.3rem;
+}
+.title {
+  overflow: hidden;
+  height: 3.3rem;
+  margin: 3rem 0 0 0;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+h2 {
+  font-weight: 400;
+  font-size: 3rem;
+  align-items: center;
+}
+h3 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.cadastro {
+  color: #efede4;
+  background-color: #4f46e5;
+}
+
+.divider {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  position: relative;
+  margin: 1em;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #4f46e5;
+  transform-origin: left;
+  animation: divider-animation 0.5s linear;
+}
+.d-text {
+  color: #4f46e5;
+  margin-top: 1rem;
+  overflow: hidden;
+}
+span {
+  display: block;
+  height: 100%;
+  animation: rise-word 0.5s linear;
+}
+
+.implantacao {
+  margin: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: 100vw;
+  padding: 0;
+}
+.programa {
+  height: 10em;
+  object-fit: cover;
+  width: 100%;
+  padding-top: -100px;
+}
+
+@keyframes divider-animation {
+  0% {
+    left: -100%;
+  }
+
+  45% {
+    left: -95%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes rise-word {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fall-word {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fall-title {
+  0% {
+    transform: translateY(-200%);
+  }
+  30% {
+    transform: translateY(-200%);
+  }
+  36% {
+    transform: translateY(-100%);
+  }
+  63% {
+    transform: translateY(-100%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
