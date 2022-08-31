@@ -70,10 +70,12 @@ h2 {
   font-weight: 400;
   font-size: 3rem;
   align-items: center;
+  margin: 0;
 }
 h3 {
   font-weight: 400;
   font-size: 2rem;
+  margin: 0;
 }
 
 .cadastro {
@@ -120,7 +122,7 @@ span {
 .programa {
   height: 10em;
   object-fit: cover;
-  width: 100%;
+  width: 80%;
   padding-top: -100px;
 }
 
