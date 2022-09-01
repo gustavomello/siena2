@@ -17,11 +17,12 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-gap: 1rem;
+  grid-gap: 0;
 }
 .hero {
   height: 80vh;
   background-image: url(img/quadra.jpg);
+  animation: fall-hero 0.3s linear;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,10 +34,14 @@ body {
   justify-content: space-between;
 }
 .bigtext {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 1.4;
   text-align: center;
-  padding: 0.5rem;
+  max-width: 100vw;
+  margin: 1.3rem 0;
 }
 .seclink {
   background-color: #efede4;
@@ -88,22 +93,31 @@ h3 {
   justify-content: space-between;
   align-self: center;
   position: relative;
-  margin: 1em;
+  margin: 0;
+  padding: 1rem;
+}
+.inverted {
+  background-color: #4f46e5;
+  color: #efede4;
 }
 
 .horizontal-line {
   position: absolute;
-  top: 0;
+  top: calc(1rem - 2px);
   left: 0;
-  width: 100%;
+  width: calc(100vw - 2rem);
   height: 2px;
   background: #4f46e5;
   transform-origin: left;
   animation: divider-animation 0.5s linear;
+  margin: 1rem;
+}
+.white {
+  background-color: #efede4;
 }
 .d-text {
   color: #4f46e5;
-  margin-top: 1rem;
+  margin-top: 2rem;
   overflow: hidden;
 }
 span {
@@ -125,7 +139,148 @@ span {
   width: 80%;
   padding-top: -100px;
 }
-
+.img-section {
+  max-width: 100vw;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0 1.3rem 0;
+  background-color: #4f46e5;
+  color: #efede4;
+}
+@media screen {
+}
+.center {
+  margin: 0 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.right {
+  align-self: center;
+  max-width: 90vw;
+  border-radius: 100px 0 100px 0;
+}
+.left {
+  max-width: 90vw;
+  border-radius: 0 100px 0 100px;
+}
+.contact {
+  background-color: #4f46e5;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+h5 {
+  font-weight: 1000;
+  color: #efede4;
+  font-size: 3rem;
+  text-align: center;
+  margin: 1.5rem 0 0 0;
+}
+/* .conlink {
+  background-color: #efede4;
+  padding: 0.25rem;
+  border-radius: 6rem;
+} */
+.contact {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #efede4;
+}
+.form-inputs {
+  margin-bottom: 1.3em;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#botaocadastro {
+  align-self: center;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  width: max-content;
+  height: 3.75em;
+  line-height: 3.75em;
+  border-radius: 3.75em;
+  padding: 0 2.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.input-cadastro {
+  appearance: none;
+  background-color: #efede4;
+  border-radius: 3.75em;
+  border: none;
+  color: #181d21;
+  display: block;
+  outline: 0;
+  padding: 0 0.825rem;
+  text-decoration: none;
+  width: 20rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 2.25;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-input > label {
+  padding: 1.3rem;
+}
+form > p > a {
+  color: #efede4;
+}
+form > p {
+  margin-top: 2rem;
+  margin: 1.3rem;
+  text-align: center;
+}
+.whatsapp {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  margin: 0 1em 1em 0;
+  width: 80px;
+  height: 80px;
+}
+.m91 {
+  background-color: #4f46e5;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+.logo {
+  width: 40em;
+  max-width: 80vw;
+  filter: grayscale(100%);
+  filter: contrast(0%);
+  filter: brightness(0%);
+}
 @keyframes divider-animation {
   0% {
     left: -100%;
@@ -158,6 +313,14 @@ span {
   }
 }
 
+@keyframes fall-hero {
+  0% {
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @keyframes fall-title {
   0% {
     transform: translateY(-200%);
@@ -174,7 +337,6 @@ span {
   70% {
     transform: translateY(0%);
   }
-
   100% {
     transform: translateY(0%);
   }
